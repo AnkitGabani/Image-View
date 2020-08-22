@@ -1,0 +1,10 @@
+POD - pod 'SDWebImage'
+
+
+var strImage = BASE_URL+imageName
+
+strImage = strImage.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+
+let url = URL(string: strImage)
+            
+self.img.sd_setImage(with: url, for: .normal, placeholderImage: UIImage(named: "avatar"), completed: nil)
